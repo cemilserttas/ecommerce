@@ -142,13 +142,13 @@ Ce fichier contient pour chaque élément :
 - [x] Copywriting fiches produits
 - [x] Génération visuels produits via IA
 - [x] Développement structure HTML
-- [ ] Ajout bannières supplémentaires (slider)
+- [x] Ajout bannières supplémentaires (slider)
 
 ### Phase 3 : Intégration & Design
 - [x] Intégration contenu
 - [x] Styling Tailwind
 - [x] Menu mobile fonctionnel
-- [ ] Tests responsive complets
+- [x] Tests responsive complets
 
 ### Phase 4 : Documentation & Rendu
 - [x] Journal des prompts en cours
