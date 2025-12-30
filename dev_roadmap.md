@@ -4,7 +4,7 @@
 **Outils :** Anti-Gravity (Code) + GitHub (Repo) + Netlify (Deploy).
 
 ## PHASE 1 : INITIALISATION DU PROJET
-1.  Cloner le repo GitHub dans Anti-Gravity.
+1.  Cloner le repo GitHub dans Anti-Gravity. (déjà fait)
 2.  Créer la structure des dossiers :
     ```text
     / (root)
