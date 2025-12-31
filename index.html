@@ -239,7 +239,7 @@
 
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center" aria-label="Retour à l'accueil HIMSANE">
-                    <img src="assets/images/logo.png" alt="HIMSANE Logo" class="h-10 w-auto">
+                    <img src="assets/images/logo.png" alt="HIMSANE Logo" class="h-14 w-auto">
                 </a>
 
                 <!-- Navigation Desktop -->
@@ -353,7 +353,7 @@
                                 Héritier d'une tradition centenaire, il transcende les modes pour devenir le compagnon
                                 de toute une vie.
                             </p>
-                            <a href="product.html?id=3"
+                            <a href="product-trench.html"
                                 class="btn-primary inline-flex items-center bg-secondary hover:bg-secondary/90 text-primary font-medium px-8 py-4 text-sm tracking-wide uppercase transition-all">
                                 Découvrir la pièce
                                 <i class="fa-solid fa-arrow-right ml-3"></i>
@@ -383,7 +383,7 @@
                                 Tissée dans les ateliers français, notre soie caresse la peau avec une douceur
                                 incomparable.
                             </p>
-                            <a href="product.html?id=2"
+                            <a href="product-chemise.html"
                                 class="btn-primary inline-flex items-center bg-secondary hover:bg-secondary/90 text-primary font-medium px-8 py-4 text-sm tracking-wide uppercase transition-all">
                                 Voir la chemise
                                 <i class="fa-solid fa-arrow-right ml-3"></i>
@@ -668,6 +668,48 @@
         </div>
     </section>
 
+    <!-- ========== VIDEO CINÉMATIQUE ========== -->
+    <section id="video-showcase" class="relative h-[70vh] min-h-[500px] overflow-hidden">
+        <!-- Video Background -->
+        <div class="absolute inset-0">
+            <video id="hero-video" class="w-full h-full object-cover" autoplay muted loop playsinline
+                poster="assets/images/video-poster.jpg">
+                <!-- Placeholder pour la vidéo VEO3 - Remplacez par votre vidéo générée -->
+                <source src="assets/videos/himsane-cinematic.mp4" type="video/mp4">
+                <!-- Image de fallback -->
+            </video>
+            <!-- Overlay gradient -->
+            <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent"></div>
+            <div class="absolute inset-0 bg-primary/20"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+            <p class="text-secondary font-medium tracking-[0.4em] text-xs uppercase mb-4 animate-fadeIn">L'Art de
+                l'Élégance</p>
+            <h2
+                class="font-heading text-4xl sm:text-5xl lg:text-6xl text-white font-medium mb-6 max-w-3xl leading-tight">
+                Une vision cinématique du style masculin
+            </h2>
+            <p class="text-white/70 text-lg max-w-xl mb-8 leading-relaxed">
+                Plongez dans l'univers HIMSANE, où chaque mouvement révèle la perfection de nos créations.
+            </p>
+
+            <!-- Play Button -->
+            <button id="play-video-btn"
+                class="group relative w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-secondary hover:border-secondary transition-all duration-300 flex items-center justify-center">
+                <i class="fa-solid fa-play text-white text-xl ml-1 group-hover:scale-110 transition-transform"></i>
+                <span class="absolute inset-0 rounded-full border border-white/20 animate-ping"></span>
+            </button>
+
+            <!-- Video controls hint -->
+            <p class="text-white/40 text-xs mt-4 tracking-wider uppercase">Cliquez pour activer le son</p>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream to-transparent"></div>
+    </section>
+
     <!-- ========== NEWSLETTER ========== -->
     <section class="py-20 bg-cream">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -809,6 +851,26 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             HimsaneCart.init();
+
+            // Video controls
+            const heroVideo = document.getElementById('hero-video');
+            const playBtn = document.getElementById('play-video-btn');
+
+            if (heroVideo && playBtn) {
+                let isMuted = true;
+
+                playBtn.addEventListener('click', () => {
+                    if (isMuted) {
+                        heroVideo.muted = false;
+                        playBtn.innerHTML = '<i class="fa-solid fa-volume-high text-white text-xl group-hover:scale-110 transition-transform"></i>';
+                        isMuted = false;
+                    } else {
+                        heroVideo.muted = true;
+                        playBtn.innerHTML = '<i class="fa-solid fa-play text-white text-xl ml-1 group-hover:scale-110 transition-transform"></i><span class="absolute inset-0 rounded-full border border-white/20 animate-ping"></span>';
+                        isMuted = true;
+                    }
+                });
+            }
         });
     </script>
 
