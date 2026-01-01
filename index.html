@@ -229,10 +229,13 @@
 
         /* Animation pour l'indicateur Défiler */
         @keyframes scrollBounce {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0) rotate(90deg);
                 opacity: 0.7;
             }
+
             50% {
                 transform: translateY(8px) rotate(90deg);
                 opacity: 1;
@@ -243,6 +246,7 @@
             0% {
                 transform: translateY(-100%);
             }
+
             100% {
                 transform: translateY(100%);
             }
@@ -447,9 +451,12 @@
 
             <!-- Scroll Indicator -->
             <div class="absolute bottom-8 right-8 hidden md:flex flex-col items-center text-white/70">
-                <span class="scroll-indicator-text text-xs tracking-widest uppercase mb-2 origin-center text-secondary font-medium">Défiler</span>
+                <span
+                    class="scroll-indicator-text text-xs tracking-widest uppercase mb-2 origin-center text-secondary font-medium">Défiler</span>
                 <div class="w-px h-16 bg-white/30 relative overflow-hidden">
-                    <div class="scroll-indicator-line absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-secondary to-transparent"></div>
+                    <div
+                        class="scroll-indicator-line absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-secondary to-transparent">
+                    </div>
                 </div>
                 <i class="fa-solid fa-chevron-down text-secondary text-xs mt-2 animate-bounce"></i>
             </div>
@@ -727,12 +734,14 @@
             <button id="play-video-btn"
                 class="group relative w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-secondary hover:border-secondary transition-all duration-300 flex items-center justify-center"
                 aria-label="Activer/Désactiver le son">
-                <i id="sound-icon" class="fa-solid fa-volume-xmark text-white text-xl group-hover:scale-110 transition-transform"></i>
+                <i id="sound-icon"
+                    class="fa-solid fa-volume-xmark text-white text-xl group-hover:scale-110 transition-transform"></i>
                 <span class="absolute inset-0 rounded-full border border-white/20 animate-ping"></span>
             </button>
 
             <!-- Video controls hint -->
-            <p id="sound-hint" class="text-white/40 text-xs mt-4 tracking-wider uppercase">Cliquez pour activer le son</p>
+            <p id="sound-hint" class="text-white/40 text-xs mt-4 tracking-wider uppercase">Cliquez pour activer le son
+            </p>
         </div>
 
         <!-- Decorative elements -->
@@ -768,8 +777,7 @@
 
                 <!-- Brand -->
                 <div class="lg:col-span-1">
-                    <img src="assets/images/logo.png" alt="HIMSANE"
-                        class="h-10 w-auto mb-6 invert brightness-0 contrast-200">
+                    <img src="assets/images/logo.png" alt="HIMSANE" class="h-10 w-auto mb-6 bg-white p-1 rounded-sm">
                     <p class="text-white/60 text-sm leading-relaxed mb-6">
                         HIMSANE incarne l'élégance masculine contemporaine. Des pièces intemporelles pour l'homme
                         moderne.
@@ -867,7 +875,8 @@
                     <a href="mentions-legales.html" class="hover:text-secondary transition-colors">CGV</a>
                 </div>
                 <p class="mt-4 md:mt-0">
-                    Réalisé par <span class="text-secondary">Cemil SERTTAS</span> & Bedi Tieko
+                    Réalisé par <span class="text-secondary">Cemil SERTTAS</span> & <span class="text-secondary">Bedi
+                        TIEKO</span>
                 </p>
             </div>
 
